@@ -2,13 +2,17 @@
   if (!isset($_SESSION)){
   	session_start();
   }
-require ("php/dbconn.php");
+if($_POST['database']=='Mysql'){
+	require ("php/mysql_conn.php");
+	
+}
 
 ob_start();
 $db = $mysqli_conection;
 // Define $myusername and $mypassword
-$myusername = $_POST['myusername'];
-$mypassword = $_POST['mypassword'];
+$username= $_POST['username'];
+$password = $_POST['password'];
+$hostname = $_POST['hostname'];
 
 // To protect MySQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
@@ -31,3 +35,5 @@ if ($count == 1) {
 }
 ob_end_flush();
 ?>
+
+/644501072/4134/

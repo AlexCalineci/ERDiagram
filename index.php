@@ -20,7 +20,6 @@ if (!isset($_SESSION['database'])) {
 		<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="./lib/bootstrap/css/bootstrap-select.min.css" rel="stylesheet">
 		<!-- Custom styles for this template -->
-		<link href="./css/dashboard.css" rel="stylesheet">
 
 		<!-- Just for debugging purposes. Don't actually copy this line! -->
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -158,7 +157,6 @@ if (!isset($_SESSION['database'])) {
 		<script src="./lib/bootstrap/js/bootstrap-select.min.js"></script>
 		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 		<script src="./javascript/js_utils.js"></script>
-		<script src="./javascript/jplumb_survey.js"></script>
 
 	</body>
 
