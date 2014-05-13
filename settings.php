@@ -45,7 +45,7 @@
 			<div class="row">
 				<form class="registration" method="post" role = "form" action="databasecheck.php">
 					<br>
-					<select class="form-control list">
+					<select class="form-control list" name = "database" id="database">
 						<option>Mysql</option>
 						<option disabled>Oracle</option>
 						<option disabled>MSSQL</option>
@@ -56,7 +56,7 @@
 					<div class="input-group">
 					<div class="row">
 						<div class="col-lg-6">
-							<input type="text" class="form-control" placeholder="Hostname"  name = "hostmane" id="hostname" required>
+							<input type="text" class="form-control" placeholder="Hostname"  name = "hostname" id="hostname" required>
 							</div>
 								<div class="col-lg-6">
 									<input type="text" class="form-control" placeholder="port"  name = "port" id="port">
