@@ -3,15 +3,12 @@ if (!isset($_SESSION)) {
 	session_start();
 }
 if ($_POST['database'] == 'Mysql') {
-	echo $_POST['database'];
-	echo  $_POST['dbuser'];
-	echo  $_POST['dbpassword'];
 	require ("php/mysql/mysql_conn.php");
-
 	ob_start();
 	$db = $mysqli_conection;
 	// Define $myusername and $mypassword
 	$username = $_POST['dbuser'];
+	
 	if(!isset($_POST['dbpassword'])){
 		$password = '';
 	}else{
@@ -21,8 +18,7 @@ if ($_POST['database'] == 'Mysql') {
 	$port = $_POST['port'];
 
 	// To protect MySQL injection (more detail about MySQL injection)
-	$username = stripslashes($username);
-	$hostname = stripslashes($username);
+	$hostname = stripslashes($hostname);
 	$username = mysqli_real_escape_string($mysqli_conection, $username);
 	$password = mysqli_real_escape_string($mysqli_conection, $password);
 
@@ -32,7 +28,9 @@ if ($_POST['database'] == 'Mysql') {
 	
 	if ($count > 1) {
 		$_SESSION["dbuser"] = $username;
-		$_SESSION["database"] = $_POST['database'];
+		$_SESSION["password"] = $password;
+		$_SESSION["hostname"] =$hostname;
+		$_SESSION["port"] = $port;
 		header("location:mysql_er.php");
 	} else {
 		echo "Wrong Username or Password";

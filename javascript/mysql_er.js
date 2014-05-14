@@ -1,0 +1,8 @@
+;(function() {
+
+	jsPlumb.ready(function() {
+	
+	
+});
+
+})();
